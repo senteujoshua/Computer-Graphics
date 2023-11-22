@@ -31,6 +31,28 @@ void drawHut() {
     glColor3f(0.0, 0.0, 1.0); // Blue
     glVertex3f(0.4, 0.2, 0.5);
   glEnd();
+  // Draw Borders
+    glLineWidth(3.0);
+    glBegin(GL_LINE_LOOP);
+    // Red border (left side)
+    glColor3f(1.0, 0.0, 0.0);
+    glVertex3f(-0.4, -0.6, 0.5);
+    glVertex3f(-0.4, 0.2, 0.5);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    // Green border (bottom side)
+    glColor3f(0.0, 1.0, 0.0);
+    glVertex3f(-0.4, -0.6, 0.5);
+    glVertex3f(0.4, -0.6, 0);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    // Blue border (right side)
+    glColor3f(0.0, 0.0, 1.0);
+    glVertex3f(0.4, -0.6, 0);
+    glVertex3f(0.4, 0.2, 0);
+    glEnd();
 }
 
 void display() {
